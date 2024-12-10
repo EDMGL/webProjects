@@ -56,6 +56,25 @@
         <p>&copy; 2024 Chery Türkiye. Tüm Hakları Saklıdır.</p>
     </footer>
 
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+                embeddedservice_bootstrap.init(
+                    '00DKI000000H06u',
+                    'Chery_ASA',
+                    'https://cherycrm--partial.sandbox.my.site.com/ESWCheryASA1732895171504',
+                    {
+                        scrt2URL: 'https://cherycrm--partial.sandbox.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        }
+    </script>
+    <script type='text/javascript' src='https://cherycrm--partial.sandbox.my.site.com/ESWCheryASA1732895171504/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
     <script src="scripts.js"></script>
 </body>
 </html>
