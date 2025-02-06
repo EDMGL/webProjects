@@ -3,67 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
- 
-
-    <title>Chery Türkiye</title>
+    <title>360 Panorama Görüntüleyici</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/download.png" alt="Chery Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="slider">
-        <div class="slider">
-            <div class="slides">
-                <img src="images/araba1.jpg" alt="Araba 1">
-                <img src="images/araba2.jpg" alt="Araba 2">
-                <img src="images/araba3.jpg" alt="Araba 3">
-            </div>
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
-        </div>
-    </section>
-
-    <section id="iletisim">
-        <h2>İletişim</h2>
-        <p><strong>Telefon:</strong> +90 123 456 78 90</p>
-        <p><strong>E-posta:</strong> info@cheryturkiye.com</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Chery Türkiye. Tüm Hakları Saklıdır.</p>
-    </footer>
-
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US'; 
-                embeddedservice_bootstrap.init(
-                    '00DKI000000H06u',
-                    'Chery_ASA',
-                    'https://cherycrm--partial.sandbox.my.site.com/ESWCheryASA1732895171504',
-                    {
-                        scrt2URL: 'https://cherycrm--partial.sandbox.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        }
-    </script>
-    <script type='text/javascript'
-        src='https://cherycrm--partial.sandbox.my.site.com/ESWCheryASA1732895171504/assets/js/bootstrap.min.js'
-        onload='initEmbeddedMessaging()'></script>
-
     <script src="scripts.js"></script>
 </body>
 
