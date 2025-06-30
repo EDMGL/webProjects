@@ -4,15 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <title>360 Panorama Görüntüleyici</title>
+    <!-- Pannellum CSS ve JS dosyalarını ekleyelim -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        body { margin: 0; }
-        canvas { display: block; }
+        #panorama {
+            width: 100vw;
+            height: 100vh;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
-    <script src="scripts.js"></script>
+    <div id="panorama"></div>
+    <script>
+        // Scripts.js içeriğini direkt buraya alıyoruz
+        window.onload = function() {
+            pannellum.viewer('panorama', {
+                type: "equirectangular",
+                panorama: "resim.jpeg",  // Resim dosyasının adını düzelttim
+                autoLoad: true,
+                autoRotate: -2,
+                compass: true,
+                hotSpotDebug: false,
+                default: {
+                    firstScene: "panorama",
+                    sceneFadeDuration: 1000
+                },
+                controls: {
+                    mouseZoom: true,
+                    pan: true,
+                    zoom: true
+                },
+                hfov: 120,
+                minHfov: 50,
+                maxHfov: 150,
+                showControls: true,
+                showFullscreenCtrl: true,
+                showZoomCtrl: true
+            });
+        };
+    </script>
 </body>
 
 </html>

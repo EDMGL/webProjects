@@ -111,3 +111,21 @@ function init() {
 // Uygulamayı başlat
 init();
 animate();
+
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "images/resim.jpeg",
+    "autoLoad": true,
+    "autoRotate": -2,
+    "compass": true,
+    "hotSpotDebug": false,
+    "default": {
+        "firstScene": "panorama",
+        "sceneFadeDuration": 1000
+    },
+    "controls": {
+        "mouseZoom": true,
+        "pan": true,
+        "zoom": true
+    }
+});
